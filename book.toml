@@ -1,0 +1,18 @@
+[book]
+authors = ["qaqland"]
+language = "en"
+multilingual = false
+src = "src"
+title = "BB 中"
+
+[build]
+create-missing = true
+
+[output.html]
+git-repository-url = "https://github.com/qaqland/busybox"
+edit-url-template = "https://github.com/qaqland/busybox/edit/main/{path}"
+cname = "bb.qaq.land"
+no-section-label = true
+
+[output.html.fold]
+enable = true
