@@ -1,0 +1,662 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>BB 中</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><div>用户与工作组</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="id.html">id</a></li><li class="chapter-item "><a href="last.html">last</a></li><li class="chapter-item "><a href="who.html">who</a></li><li class="chapter-item "><a href="whoami.html">whoami</a></li><li class="chapter-item "><a href="groups.html">groups</a></li><li class="chapter-item "><a href="adduser.html">adduser</a></li><li class="chapter-item "><a href="deluser.html">deluser</a></li><li class="chapter-item "><a href="addgroup.html">addgroup</a></li><li class="chapter-item "><a href="delgroup.html">delgroup</a></li><li class="chapter-item "><a href="passwd.html">passwd</a></li><li class="chapter-item "><a href="chpasswd.html">chpasswd</a></li></ol></li><li class="chapter-item "><div>归档及压缩包</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="bzip2.html">bzip2</a></li><li class="chapter-item "><a href="bzcat.html">bzcat</a></li><li class="chapter-item "><a href="bunzip2.html">bunzip2</a></li><li class="chapter-item "><a href="gzip.html">gzip</a></li><li class="chapter-item "><a href="gunzip.html">gunzip</a></li><li class="chapter-item "><a href="unzip.html">unzip</a></li><li class="chapter-item "><a href="zcat.html">zcat</a></li><li class="chapter-item "><a href="unxz.html">unxz</a></li><li class="chapter-item "><a href="xzcat.html">xzcat</a></li><li class="chapter-item "><a href="lzcat.html">lzcat</a></li><li class="chapter-item "><a href="lzma.html">lzma</a></li><li class="chapter-item "><a href="unlzma.html">unlzma</a></li><li class="chapter-item "><a href="lzop.html">lzop</a></li><li class="chapter-item "><a href="lzopcat.html">lzopcat</a></li><li class="chapter-item "><a href="unlzop.html">unlzop</a></li></ol></li><li class="chapter-item "><div>编码解码</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="base64.html">base64</a></li><li class="chapter-item "><a href="md5sum.html">md5sum</a></li><li class="chapter-item "><a href="sha1sum.html">sha1sum</a></li><li class="chapter-item "><a href="sha3sum.html">sha3sum</a></li><li class="chapter-item "><a href="sha256sum.html">sha256sum</a></li><li class="chapter-item "><a href="sha512sum.html">sha512sum</a></li></ol></li><li class="chapter-item "><div>我的文件</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="cat.html">cat</a></li><li class="chapter-item "><a href="pwd.html">pwd</a></li><li class="chapter-item "><a href="find.html">find</a></li><li class="chapter-item "><a href="head.html">head</a></li><li class="chapter-item "><a href="chmod.html">chmod</a></li><li class="chapter-item "><a href="basename.html">basename</a></li></ol></li><li class="chapter-item "><div>终端及系统</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="arch.html">arch</a></li><li class="chapter-item "><a href="uname.html">uname</a></li><li class="chapter-item "><a href="which.html">which</a></li><li class="chapter-item "><a href="env.html">env</a></li><li class="chapter-item "><a href="printenv.html">printenv</a></li><li class="chapter-item "><a href="reset.html">reset</a></li><li class="chapter-item "><a href="clear.html">clear</a></li><li class="chapter-item "><a href="true.html">true</a></li><li class="chapter-item "><a href="tee.html">tee</a></li><li class="chapter-item "><a href="yes.html">yes</a></li></ol></li><li class="chapter-item "><div>磁盘管理</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="mount.html">mount</a></li></ol></li><li class="chapter-item "><div>附件里的小工具</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="cal.html">cal</a></li><li class="chapter-item "><a href="vi.html">vi</a></li><li class="chapter-item "><a href="wget.html">wget</a></li><li class="chapter-item "><a href="top.html">top</a></li><li class="chapter-item "><a href="nc.html">nc</a></li></ol></li><li class="chapter-item "><div>其它</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="bbconfig.html">bbconfig</a></li></ol></li><li class="chapter-item "><a href="_index.html">字母表索引</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">BB 中</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/qaqland/busybox" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="id"><a class="header" href="#id">id</a></h1>
+<h2 id="synopsis"><a class="header" href="#synopsis">SYNOPSIS</a></h2>
+<pre><code>id [-ugGnr] [USER]
+</code></pre>
+<h2 id="description"><a class="header" href="#description">DESCRIPTION</a></h2>
+<p>输出 USER 用户的相关信息。</p>
+<p>没有 OPTIONS 时输出用户的所有信息，没有给定用户时默认当前用户。</p>
+<h2 id="options"><a class="header" href="#options">OPTIONS</a></h2>
+<ul>
+<li><code>-u</code>	用户 USER ID</li>
+<li><code>-g</code>	本组 GROUP ID</li>
+<li><code>-G</code>	追加组（所有组） ID</li>
+<li><code>-n</code>	打印名称而非数字</li>
+<li><code>-r</code>	真实用户而非执行用户</li>
+</ul>
+<h2 id="examples"><a class="header" href="#examples">EXAMPLES</a></h2>
+<pre><code>$ id -u
+1000
+
+$ id -un
+qaq
+
+$ id -g
+1000
+
+$ id -G
+1000 10 18 27 28 103
+</code></pre>
+<p>常用等同于 <code>whoami</code>，查看当前用户名</p>
+<pre><code>$ id -un
+qaq
+</code></pre>
+<h2 id="real-id--effective-id"><a class="header" href="#real-id--effective-id">Real ID &amp; Effective ID</a></h2>
+<blockquote>
+<p>Real user id is the user that spawned the process.</p>
+<p>Effective user id is the user determined by the setuid bit on the binary being executed.</p>
+<p><a href="https://stackoverflow.com/questions/32455684/difference-between-real-user-id-effective-user-id-and-saved-user-id"><em>Difference between Real User ID, Effective User ID and Saved User ID</em></a></p>
+</blockquote>
+<p>【演示】可执行脚本文件不允许设置 suid 或者不会生效，我们需要制作一个二进制文件</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;unistd.h&gt;
+
+int main(void) {
+  uid_t ruid = getuid();
+  uid_t euid = geteuid();
+  printf(&quot;ruid:%d, euid:%d\n&quot;, ruid, euid);
+  return 0;
+}
+</code></pre>
+<p>编译之后修改权限</p>
+<pre><code>$ sudo chown root:root a.out
+$ sudo chmod ugo+sx a.out
+$ ls -l
+total 24
+-rwsr-sr-x    1 root     root         18272 Mar 21 23:22 a.out
+-rw-rw-rw-    1 qaq      qaq            208 Mar 21 23:21 id-r.c
+</code></pre>
+<p>可以看到程序的 real ID 是 qaq，effective ID 是 root</p>
+<pre><code>$ ./a.out
+ruid:1000, euid:0
+</code></pre>
+<h2 id="see-also"><a class="header" href="#see-also">See also</a></h2>
+<ul>
+<li>
+<p><a href="./whoami.html"><code>whoami</code></a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/User_identifier">https://en.wikipedia.org/wiki/User_identifier</a></p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="last"><a class="header" href="#last">last</a></h1>
+<h2 id="synopsis-1"><a class="header" href="#synopsis-1">SYNOPSIS</a></h2>
+<pre><code>last
+</code></pre>
+<h2 id="description-1"><a class="header" href="#description-1">DESCRIPTION</a></h2>
+<p>显示最后登录的用户清单。</p>
+<p>由于 musl 未实现部分调用，此命令与 <a href="./who.html#warnings"><code>who</code></a> 一样不能如期工作</p>
+<h2 id="see-also-1"><a class="header" href="#see-also-1">SEE ALSO</a></h2>
+<ul>
+<li><a href="https://gitlab.alpinelinux.org/alpine/aports/-/issues/3282">https://gitlab.alpinelinux.org/alpine/aports/-/issues/3282</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="who"><a class="header" href="#who">who</a></h1>
+<h2 id="synopsis-2"><a class="header" href="#synopsis-2">SYNOPSIS</a></h2>
+<pre><code>who [-aH]
+</code></pre>
+<h2 id="description-2"><a class="header" href="#description-2">DESCRIPTION</a></h2>
+<p>显示在线的用户</p>
+<h2 id="options-1"><a class="header" href="#options-1">OPTIONS</a></h2>
+<ul>
+<li><code>-a</code>	全部</li>
+<li><code>-H</code>	表头</li>
+</ul>
+<h2 id="warnings"><a class="header" href="#warnings">WARNINGS</a></h2>
+<blockquote>
+<p>Some programs like wall(1) depend on a libc feature named &quot;utmp&quot;, that cannot be implemented in libc securely.
+For this reason, musl (the libc that Alpine uses) does not implement utmp. Instead, it provides stubs that do nothing.</p>
+<p>That is why programs that use utmp - such as wall, who or w - output nothing but still exit successfully. This is expected, a feature, and cannot be fixed easily.</p>
+<p><a href="https://wiki.alpinelinux.org/wiki/GNU_core_utilities"><em>GNU core utilities - Alpine Linux</em></a></p>
+</blockquote>
+<p>此命令依赖 utmp 而 Alpine Linux 当前原生不支持（无法开箱即用），因此只会显示空白</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="whoami"><a class="header" href="#whoami">whoami</a></h1>
+<h2 id="synopsis-3"><a class="header" href="#synopsis-3">SYNOPSIS</a></h2>
+<pre><code>whoami
+</code></pre>
+<h2 id="description-3"><a class="header" href="#description-3">DESCRIPTION</a></h2>
+<p>输出当前用户关联的执行用户。</p>
+<p>用户使用此命令可以以此知道自己正在使用的用户。</p>
+<p>脚本运行时检测是否提权。</p>
+<h2 id="environment"><a class="header" href="#environment">ENVIRONMENT</a></h2>
+<ul>
+<li><code>$USER</code> 有差异：环境变量不会显示执行用户 ID，除此之外相同</li>
+</ul>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
+<p>打印当前用户名，等同于 <code>id -un</code></p>
+<pre><code>$ whoami
+qaq
+</code></pre>
+<p>还可使用此命令检测用户是否具有 sudo 权限，这里的 root 即为执行用户</p>
+<pre><code>$ sudo whoami
+root
+</code></pre>
+<h2 id="see-also-2"><a class="header" href="#see-also-2">See also</a></h2>
+<ul>
+<li><a href="./id.html"><code>id</code></a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="groups"><a class="header" href="#groups">groups</a></h1>
+<h2 id="synopsis-4"><a class="header" href="#synopsis-4">SYNOPSIS</a></h2>
+<pre><code>groups [USER]
+</code></pre>
+<h2 id="description-4"><a class="header" href="#description-4">DESCRIPTION</a></h2>
+<p>打印输出用户 USER 加入的所有组。
+用户的工作组信息保存在 <code>/etc/group</code>，该命令简化了查看操作。</p>
+<p>没有参数时打印输出 <code>&lt;当前用户&gt;</code> 的群组信息，但不等同于 <code>groups &lt;当前用户&gt;</code>，
+后者不需要退出重新登录就能显示修改后的工作组。</p>
+<p>BB 不支持 UID 仅支持用户名。</p>
+<h2 id="files"><a class="header" href="#files">FILES</a></h2>
+<ul>
+<li><code>/etc/group</code></li>
+</ul>
+<h2 id="options-2"><a class="header" href="#options-2">OPTIONS</a></h2>
+<ul>
+<li><code>&lt;USER&gt;</code><br />
+用户，默认值是当前用户</li>
+</ul>
+<h2 id="examples-1"><a class="header" href="#examples-1">EXAMPLES</a></h2>
+<p>不加参数为默认当前用户</p>
+<pre><code># groups
+qaq wheel audio input video netdev docker seat abuild
+</code></pre>
+<p>查看 root 用户加入的组</p>
+<pre><code># groups root
+root bin daemon sys adm disk wheel floppy dialout tape video
+</code></pre>
+<h2 id="source"><a class="header" href="#source">SOURCE</a></h2>
+<p>https://github.com/mirror/busybox/blob/master/coreutils/id.c</p>
+<h2 id="see-also-3"><a class="header" href="#see-also-3">SEE ALSO</a></h2>
+<ul>
+<li><a href="./addgroup.html"><code>addgroup</code></a></li>
+<li><a href="./delgroup.html"><code>delgroup</code></a></li>
+</ul>
+<hr />
+<p>u=root,g=shadow 但是 root 不在 shadow 组中 🤔</p>
+<pre><code class="language-sh">localhost:~$ ls -l /etc | grep sha
+-rw-r-----    1 root     shadow         742 Jan 18 12:55 shadow
+-rw-r-----    1 root     shadow         873 Jan 18 12:54 shadow-
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="adduser"><a class="header" href="#adduser">adduser</a></h1>
+<h2 id="synopsis-5"><a class="header" href="#synopsis-5">SYNOPSIS</a></h2>
+<pre><code>adduser [OPTIONS] USER [GROUP]
+</code></pre>
+<h2 id="description-5"><a class="header" href="#description-5">DESCRIPTION</a></h2>
+<p>创建新用户或添加用户 USER 到工作组 GROUP</p>
+<h2 id="files-1"><a class="header" href="#files-1">FILES</a></h2>
+<ul>
+<li><code>/etc/group</code><br />
+工作组及用户信息，见 groups</li>
+</ul>
+<h2 id="options-3"><a class="header" href="#options-3">OPTIONS</a></h2>
+<ul>
+<li><code>-h &lt;HOME-DIR&gt;</code>		用户家目录</li>
+<li><code>-g &lt;GECOS&gt;</code>			备注栏</li>
+<li><code>-s &lt;LOGIN-SHELL&gt;</code>	用户登录终端</li>
+<li><code>-G &lt;GROUP&gt;</code>			工作组</li>
+<li><code>-S</code>					系统用户</li>
+<li><code>-D</code>					不分配密码</li>
+<li><code>-H</code>					不创建家目录</li>
+<li><code>-u &lt;USER-ID&gt;</code>		用户 ID</li>
+<li><code>-k &lt;SKEL&gt;</code>			用户家目录的初始模板 Skeleton Directory</li>
+</ul>
+<h3 id="system-user"><a class="header" href="#system-user">System User</a></h3>
+<p>// TODO 系统用户与普通用户的区别</p>
+<h3 id="login-shell"><a class="header" href="#login-shell">Login Shell</a></h3>
+<p>用户登录终端，系统用户可以指定为 nologin</p>
+<h3 id="skeleton-directory"><a class="header" href="#skeleton-directory">Skeleton Directory</a></h3>
+<blockquote>
+<p>Directory <code>/etc/skel/</code> (skel is derived from the “skeleton”) is used to initiate home directory when a user is first created.</p>
+<p><a href="https://www.thegeekdiary.com/understanding-the-etc-skel-directory-in-linux/">https://www.thegeekdiary.com/understanding-the-etc-skel-directory-in-linux/</a></p>
+</blockquote>
+<p>不过 Alpine Linux 默认没有 <code>/etc/skel</code>，文中提到的记录 SKEL 的配置文件 <code>/etc/default/useradd</code> 也不存在</p>
+<h2 id="examples-2"><a class="header" href="#examples-2">EXAMPLES</a></h2>
+<p>创建用户 test-user 并添加到已存在的工作组</p>
+<pre><code># adduser -G qaq -H test-user
+Changing password for test-user
+New password:
+Retype password:
+passwd: password for test-user changed by root
+</code></pre>
+<p>创建用户 test-user-2 时指定无密码</p>
+<pre><code>adduser -H -D test-user-2
+</code></pre>
+<p>添加用户到工作组</p>
+<pre><code>adduser test-user-2 writefreely
+</code></pre>
+<h2 id="see-also-4"><a class="header" href="#see-also-4">SEE ALSO</a></h2>
+<ul>
+<li><a href="./groups.html">groups</a></li>
+<li><a href="./deluser.html">deluser</a></li>
+<li><a href="./passwd.html">passwd</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="deluser"><a class="header" href="#deluser">deluser</a></h1>
+<h2 id="synopsis-6"><a class="header" href="#synopsis-6">SYNOPSIS</a></h2>
+<pre><code>deluser [--remove-home] USER
+</code></pre>
+<h2 id="description-6"><a class="header" href="#description-6">DESCRIPTION</a></h2>
+<p>删除用户 USER</p>
+<h2 id="see-also-5"><a class="header" href="#see-also-5">SEE ALSO</a></h2>
+<ul>
+<li><a href="../adduser"><code>adduser</code></a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="addgroup"><a class="header" href="#addgroup">addgroup</a></h1>
+<h2 id="synopsis-7"><a class="header" href="#synopsis-7">SYNOPSIS</a></h2>
+<pre><code>addgroup [-g GID] [-S] [USER] GROUP
+</code></pre>
+<h2 id="description-7"><a class="header" href="#description-7">DESCRIPTION</a></h2>
+<p>新增工作组或添加用户到组。</p>
+<p>如果调用时有两个参数 USER 和 GROUP，会将已经存在的用户 USER 添加到已经存在的工作组 GROUP 中。</p>
+<h2 id="files-2"><a class="header" href="#files-2">FILES</a></h2>
+<ul>
+<li><code>/etc/group</code><br />
+工作组及用户信息，见 groups</li>
+<li><code>/etc/shadow</code><br />
+密码</li>
+</ul>
+<h2 id="options-4"><a class="header" href="#options-4">OPTIONS</a></h2>
+<ul>
+<li>
+<p><code>-g &lt;GROUP-ID&gt;</code><br />
+工作组 ID（Group ID）</p>
+</li>
+<li>
+<p><code>-S</code><br />
+指定为<strong>系统</strong>工作组（System Group）</p>
+</li>
+</ul>
+<h3 id="system-groups"><a class="header" href="#system-groups">System Groups</a></h3>
+<blockquote>
+<p>There is no inherent difference between system groups and 'normal' groups, just like there is none between system users and regular users. It is by convention that human users are assigned uids from a certain number (e.g. 1000) upwards, whereas system users get uids in a range below that number.</p>
+<p><strong>The actual uid number, apart from the special uid 0 which is reserved for <code>root</code>, has no meaning at all and does not convey any privileges.</strong></p>
+<p>We distinguish system users and regular users only because they are treated differently. For instance, there is no point in displaying system users in a graphical login manager. Also, most system users don't need a login shell or home directory, whereas human users (normally) do.</p>
+<p><a href="https://askubuntu.com/questions/523949/what-is-a-system-group-as-opposed-to-a-normal-group">https://askubuntu.com/questions/523949/what-is-a-system-group-as-opposed-to-a-normal-group</a></p>
+</blockquote>
+<p>与系统用户相似，除了创建工作组时 ID 的选取范围不同外，系统工作组和普通工作组没有区别</p>
+<h2 id="examples-3"><a class="header" href="#examples-3">EXAMPLES</a></h2>
+<p>新建组</p>
+<pre><code>addgroup test-group
+</code></pre>
+<p>添加用户 <code>qaq</code> 到组</p>
+<pre><code>addgroup qaq test-group
+</code></pre>
+<h2 id="source-1"><a class="header" href="#source-1">SOURCE</a></h2>
+<p>https://github.com/mirror/busybox/blob/master/loginutils/addgroup.c</p>
+<h2 id="see-also-6"><a class="header" href="#see-also-6">SEE ALSO</a></h2>
+<ul>
+<li>
+<p><a href="./delgroup.html"><code>delgroup</code></a></p>
+</li>
+<li>
+<p><a href="https://man.archlinux.org/man/groupadd.8">https://man.archlinux.org/man/groupadd.8</a></p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="delgroup"><a class="header" href="#delgroup">delgroup</a></h1>
+<h2 id="synopsis-8"><a class="header" href="#synopsis-8">SYNOPSIS</a></h2>
+<pre><code>delgroup [USER] GROUP
+</code></pre>
+<h2 id="description-8"><a class="header" href="#description-8">DESCRIPTION</a></h2>
+<p>删除工作组 GROUP 或从工作组 GROUP 中删除用户 USER</p>
+<h2 id="examples-4"><a class="header" href="#examples-4">EXAMPLES</a></h2>
+<p>从组中删除用户</p>
+<pre><code>delgroup qaq test-group
+</code></pre>
+<p>删除组</p>
+<pre><code>delgroup test-group
+</code></pre>
+<h2 id="see-also-7"><a class="header" href="#see-also-7">SEE ALSO</a></h2>
+<ul>
+<li><a href="./addgroup.html"><code>addgroup</code></a></li>
+<li><a href="./groups.html"><code>groups</code></a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="passwd"><a class="header" href="#passwd">passwd</a></h1>
+<h2 id="synopsis-9"><a class="header" href="#synopsis-9">SYNOPSIS</a></h2>
+<pre><code>passwd [-a ALG] [-dlu] [USER]
+</code></pre>
+<h2 id="description-9"><a class="header" href="#description-9">DESCRIPTION</a></h2>
+<p>修改 USER 密码，默认当前用户</p>
+<p>每个用户都在 <code>/etc/passwd</code> 有对应的一行</p>
+<pre><code>root:x:0:0:root:/root:/bin/ash
+</code></pre>
+<p>依次为</p>
+<pre><code>&lt;用户名&gt;:&lt;密码&gt;:&lt;UID&gt;:&lt;GID&gt;:&lt;注释&gt;:&lt;用户家目录&gt;:&lt;登录终端解释器&gt;
+</code></pre>
+<p>其中密码位为 <code>x</code> 表明密码在其它配置文件如 <code>/etc/shadow</code> 中保存。</p>
+<p>系统用户不需要登录终端，因此可设为 busybox 提供的 <code>/sbin/nologin</code>。</p>
+<h2 id="options-5"><a class="header" href="#options-5">OPTIONS</a></h2>
+<ul>
+<li><code>-a &lt;ALGORITHM&gt;</code><br />
+可选算法：des md5 sha256/512，默认 sha512</li>
+<li><code>-d</code><br />
+设置密码为空（删除密码）</li>
+<li><code>-l</code><br />
+锁定（关闭）账户</li>
+<li><code>-u</code><br />
+解锁（开启）账户</li>
+</ul>
+<h2 id="files-3"><a class="header" href="#files-3">FILES</a></h2>
+<ul>
+<li><code>/etc/passwd</code></li>
+<li><code>/etc/shadow</code></li>
+</ul>
+<h2 id="examples-5"><a class="header" href="#examples-5">EXAMPLES</a></h2>
+<p>删除密码</p>
+<pre><code># passwd -d test-user
+passwd: password for test-user changed by root
+</code></pre>
+<p>与创建用户时不指定密码相比，后者有 <code>!</code> 前者没有，<code>!</code> 表示无法通过密码登录系统。</p>
+<pre><code># tail -n 2 /etc/shadow
+test-user::19377:0:99999:7:::
+test-user-2:!:19377:0:99999:7:::
+</code></pre>
+<h2 id="source-2"><a class="header" href="#source-2">SOURCE</a></h2>
+<p>BusyBox 使用了一个 wrapper 处理权限问题</p>
+<blockquote>
+<p><code>/usr/bin/passwd</code> links to <code>/bin/bbsuid</code> which is busybox's setuid wrapper,
+passwd can't link to <code>/bin/busybox</code> because it needs to be setuid,
+it comes from the busybox-suid package though</p>
+<p><em>from alpine linux irc elly</em></p>
+</blockquote>
+<h2 id="see-also-8"><a class="header" href="#see-also-8">SEE ALSO</a></h2>
+<ul>
+<li><a href="https://linuxize.com/post/etc-shadow-file/">https://linuxize.com/post/etc-shadow-file/</a></li>
+<li><a href="https://stackoverflow.com/questions/24105498/what-do-and-mean-in-the-password-section-in-etc-shadow">https://stackoverflow.com/questions/24105498/what-do-and-mean-in-the-password-section-in-etc-shadow</a></li>
+</ul>
+<hr />
+<p>日常 sudo 输入的是当前用户的密码，可以把 sudoers 设置为免密，然后使用 passwd 删除密码。
+（SSH 远程时记得保存密钥，不然再进不容易）</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chpasswd"><a class="header" href="#chpasswd">chpasswd</a></h1>
+<h2 id="synopsis-10"><a class="header" href="#synopsis-10">SYNOPSIS</a></h2>
+<pre><code>chpasswd [-me] [-c ALG] [-R DIR]
+</code></pre>
+<h2 id="description-10"><a class="header" href="#description-10">DESCRIPTION</a></h2>
+<p>从标准读取用户名和密码的键值对，用此信息更新用户密码。</p>
+<p>用户名和密码格式为每行有 <code>username:password</code>，用户需要已经存在。</p>
+<p>如果没有启用 <code>/etc/shadow</code> 就更新 <code>/etc/passwd</code> 中的数据。</p>
+<p>与 passwd 的交互式设置密码不同，chpasswd 是命令流控制的批量修改，适用于一次性修改多个帐户的大型系统。</p>
+<h2 id="options-6"><a class="header" href="#options-6">OPTIONS</a></h2>
+<ul>
+<li><code>-e, --encrypted</code><br />
+加密形式的密码</li>
+<li><code>-m, --md5</code><br />
+使用 MD5</li>
+<li><code>-c, --crypt-method &lt;ALGORITHM&gt;</code><br />
+可选算法：des md5 sha256/512，默认 sha512</li>
+<li><code>-R, --root &lt;CHROOT_DIR&gt;</code><br />
+修改 chroot 系统的用户密码</li>
+</ul>
+<h2 id="examples-6"><a class="header" href="#examples-6">EXAMPLES</a></h2>
+<p>直接执行后等待输入，完成时 <kbd>Ctrl+d</kbd> 结束输入 </p>
+<pre><code># chpasswd
+test-user-2:123
+chpasswd: password for 'test-user-2' changed
+</code></pre>
+<p>也可使用重定向从配置文件读取修改</p>
+<pre><code>chpasswd &lt; users.txt
+</code></pre>
+<p>重定向从管道读取</p>
+<pre><code>echo &quot;test-user-2:123&quot; | chpasswd
+</code></pre>
+<h2 id="source-3"><a class="header" href="#source-3">SOURCE</a></h2>
+<p><a href="https://github.com/mirror/busybox/blob/master/loginutils/chpasswd.c">https://github.com/mirror/busybox/blob/master/loginutils/chpasswd.c</a><br />
+<a href="https://github.com/mirror/busybox/blob/master/include/usage.src.h">https://github.com/mirror/busybox/blob/master/include/usage.src.h</a></p>
+<h2 id="see-also-9"><a class="header" href="#see-also-9">SEE ALSO</a></h2>
+<ul>
+<li>
+<p><a href="./passwd.html"><code>passwd</code></a></p>
+</li>
+<li>
+<p><a href="https://unix.stackexchange.com/questions/345459/whats-the-difference-between-passwd-and-chpasswd">https://unix.stackexchange.com/questions/345459/whats-the-difference-between-passwd-and-chpasswd</a></p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bzip2"><a class="header" href="#bzip2">bzip2</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bzcat"><a class="header" href="#bzcat">bzcat</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bunzip2"><a class="header" href="#bunzip2">bunzip2</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="gzip"><a class="header" href="#gzip">gzip</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="gunzip"><a class="header" href="#gunzip">gunzip</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unzip"><a class="header" href="#unzip">unzip</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="zcat"><a class="header" href="#zcat">zcat</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unxz"><a class="header" href="#unxz">unxz</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="xzcat"><a class="header" href="#xzcat">xzcat</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lzcat"><a class="header" href="#lzcat">lzcat</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lzma"><a class="header" href="#lzma">lzma</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unlzma"><a class="header" href="#unlzma">unlzma</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lzop"><a class="header" href="#lzop">lzop</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lzopcat"><a class="header" href="#lzopcat">lzopcat</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unlzop"><a class="header" href="#unlzop">unlzop</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="base64"><a class="header" href="#base64">base64</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="md5sum"><a class="header" href="#md5sum">md5sum</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sha1sum"><a class="header" href="#sha1sum">sha1sum</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sha3sum"><a class="header" href="#sha3sum">sha3sum</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sha256sum"><a class="header" href="#sha256sum">sha256sum</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sha512sum"><a class="header" href="#sha512sum">sha512sum</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cat"><a class="header" href="#cat">cat</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pwd"><a class="header" href="#pwd">pwd</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="find"><a class="header" href="#find">find</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="head"><a class="header" href="#head">head</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chmod"><a class="header" href="#chmod">chmod</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="basename"><a class="header" href="#basename">basename</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="arch"><a class="header" href="#arch">arch</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="uname"><a class="header" href="#uname">uname</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="which"><a class="header" href="#which">which</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="env"><a class="header" href="#env">env</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="printenv"><a class="header" href="#printenv">printenv</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="reset"><a class="header" href="#reset">reset</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="clear"><a class="header" href="#clear">clear</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="true"><a class="header" href="#true">true</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tee"><a class="header" href="#tee">tee</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="yes"><a class="header" href="#yes">yes</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="mount"><a class="header" href="#mount">mount</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cal"><a class="header" href="#cal">cal</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vi"><a class="header" href="#vi">vi</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="wget"><a class="header" href="#wget">wget</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="top"><a class="header" href="#top">top</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="nc"><a class="header" href="#nc">nc</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bbconfig"><a class="header" href="#bbconfig">bbconfig</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="字母表索引"><a class="header" href="#字母表索引">字母表索引</a></h1>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
