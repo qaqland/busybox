@@ -5,6 +5,7 @@
 	-	[last](./last.md)
 	-	[who](./who.md)
 	-	[whoami](./whoami.md)
+	- 	[su](./su.md)
 	-	[groups](./groups.md)
 	-	[adduser](./adduser.md)
 	-	[deluser](./deluser.md)
