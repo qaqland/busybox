@@ -1,9 +1,8 @@
-delgroup
-========
+# delgroup
 
 ## SYNOPSIS
 
-	delgroup [USER] GROUP
+    delgroup [USER] GROUP
 
 ## DESCRIPTION
 
@@ -13,13 +12,11 @@ delgroup
 
 从组中删除用户
 
-	delgroup qaq test-group
-
+    delgroup qaq test-group
 
 删除组
 
-	delgroup test-group
-
+    delgroup test-group
 
 ## SEE ALSO
 

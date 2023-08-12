@@ -1,9 +1,8 @@
-chpasswd
-========
+# chpasswd
 
 ## SYNOPSIS
 
-	chpasswd [-me] [-c ALG] [-R DIR]
+    chpasswd [-me] [-c ALG] [-R DIR]
 
 ## DESCRIPTION
 
@@ -17,36 +16,35 @@ chpasswd
 
 ## OPTIONS
 
-* `-e, --encrypted`   
-	加密形式的密码
+* `-e, --encrypted`
+    加密形式的密码
 * `-m, --md5`  
-	使用 MD5
-* `-c, --crypt-method <ALGORITHM>`   
-	可选算法：des md5 sha256/512，默认 sha512
+    使用 MD5
+* `-c, --crypt-method <ALGORITHM>`
+    可选算法：des md5 sha256/512，默认 sha512
 * `-R, --root <CHROOT_DIR>`  
-	修改 chroot 系统的用户密码
+    修改 chroot 系统的用户密码
 
 ## EXAMPLES
 
-直接执行后等待输入，完成时 <kbd>Ctrl+d</kbd> 结束输入 
+直接执行后等待输入，完成时 <kbd>Ctrl+d</kbd> 结束输入
 
-	# chpasswd
-	test-user-2:123
-	chpasswd: password for 'test-user-2' changed
-	
+    # chpasswd
+    test-user-2:123
+    chpasswd: password for 'test-user-2' changed
+
 也可使用重定向从配置文件读取修改
 
-	chpasswd < users.txt
+    chpasswd < users.txt
 
 重定向从管道读取
 
-	echo "test-user-2:123" | chpasswd
+    echo "test-user-2:123" | chpasswd
 
 ## SOURCE
 
 <https://github.com/mirror/busybox/blob/master/loginutils/chpasswd.c>  
 <https://github.com/mirror/busybox/blob/master/include/usage.src.h>
-
 
 ## SEE ALSO
 

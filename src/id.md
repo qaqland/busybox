@@ -1,9 +1,8 @@
-id
-===
+# id
 
 ## SYNOPSIS
 
-	id [-ugGnr] [USER]
+    id [-ugGnr] [USER]
 
 ## DESCRIPTION
 
@@ -13,32 +12,32 @@ id
 
 ## OPTIONS
 
-* `-u`	用户 USER ID
-* `-g`	本组 GROUP ID
-* `-G`	追加组（所有组） ID
-* `-n`	打印名称而非数字
-* `-r`	真实用户而非执行用户
-
+| Option |     Meaning     |     Description      |
+| :----: | :-------------: | :------------------: |
+|  `-u`  |     User ID     | 用户 USER ID         |
+|  `-g`  |    Group ID     | 本组 GROUP ID        |
+|  `-G`  |    All Groups   | 追加组（所有组） ID  |
+|  `-n`  | Name Not Number | 打印名称而非数字     |
+|  `-r`  |   Real User ID  | 真实用户而非执行用户 |
 
 ## EXAMPLES
 
-	$ id -u
-	1000
+    $ id -u
+    1000
 
-	$ id -un
-	qaq
+    $ id -un
+    qaq
 
-	$ id -g
-	1000
+    $ id -g
+    1000
 
-	$ id -G
-	1000 10 18 27 28 103
+    $ id -G
+    1000 10 18 27 28 103
 
 常用等同于 `whoami`，查看当前用户名
 
-	$ id -un
-	qaq
-
+    $ id -un
+    qaq
 
 ## Real ID & Effective ID
 
@@ -56,23 +55,23 @@ id
 
 编译之后修改权限
 
-
-	$ sudo chown root:root a.out
-	$ sudo chmod ugo+sx a.out
-	$ ls -l
-	total 24
-	-rwsr-sr-x    1 root     root         18272 Mar 21 23:22 a.out
-	-rw-rw-rw-    1 qaq      qaq            208 Mar 21 23:21 id-r.c
-
+    $ sudo chown root:root a.out
+    $ sudo chmod ugo+sx a.out
+    $ ls -l
+    total 24
+    -rwsr-sr-x    1 root     root         18272 Mar 21 23:22 a.out
+    -rw-rw-rw-    1 qaq      qaq            208 Mar 21 23:21 id-r.c
 
 可以看到程序的 real ID 是 qaq，effective ID 是 root
 
+    $ ./a.out
+    ruid:1000, euid:0
 
-	$ ./a.out
-	ruid:1000, euid:0
+## SOURCE
 
+<https://github.com/mirror/busybox/blob/master/coreutils/id.c>
 
-## See also
+## SEE ALSO
 
 * [`whoami`](./whoami.md)
 

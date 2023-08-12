@@ -1,10 +1,8 @@
-groups
-=====
+# groups
 
 ## SYNOPSIS
 
-	groups [USER]
-
+    groups [USER]
 
 ## DESCRIPTION
 
@@ -23,24 +21,23 @@ BB 不支持 UID 仅支持用户名。
 ## OPTIONS
 
 * `<USER>`  
-	用户，默认值是当前用户
+    用户，默认值是当前用户
 
 ## EXAMPLES
 
 不加参数为默认当前用户
 
-	# groups
-	qaq wheel audio input video netdev docker seat abuild
-
+    # groups
+    qaq wheel audio input video netdev docker seat abuild
 
 查看 root 用户加入的组
 
-	# groups root
-	root bin daemon sys adm disk wheel floppy dialout tape video
+    # groups root
+    root bin daemon sys adm disk wheel floppy dialout tape video
 
 ## SOURCE
 
-https://github.com/mirror/busybox/blob/master/coreutils/id.c
+<https://github.com/mirror/busybox/blob/master/coreutils/id.c>
 
 ## SEE ALSO
 
@@ -56,4 +53,3 @@ localhost:~$ ls -l /etc | grep sha
 -rw-r-----    1 root     shadow         742 Jan 18 12:55 shadow
 -rw-r-----    1 root     shadow         873 Jan 18 12:54 shadow-
 ```
-

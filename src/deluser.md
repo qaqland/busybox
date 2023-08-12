@@ -1,9 +1,8 @@
-deluser
-=======
+# deluser
 
 ## SYNOPSIS
 
-	deluser [--remove-home] USER
+    deluser [--remove-home] USER
 
 ## DESCRIPTION
 

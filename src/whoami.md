@@ -1,9 +1,8 @@
-whoami
-======
+# whoami
 
 ## SYNOPSIS
 
-	whoami
+    whoami
 
 ## DESCRIPTION
 
@@ -21,15 +20,13 @@ whoami
 
 打印当前用户名，等同于 `id -un`
 
-	$ whoami
-	qaq
-
+    $ whoami
+    qaq
 
 还可使用此命令检测用户是否具有 sudo 权限，这里的 root 即为执行用户
 
-	$ sudo whoami
-	root
-
+    $ sudo whoami
+    root
 
 ## See also
 

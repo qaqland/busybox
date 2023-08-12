@@ -5,10 +5,30 @@
         }
     ],
     "settings": {
-        "editor.detectIndentation": false,
-		"editor.insertSpaces": false,
-		"editor.rulers": [
-			80
-		],
-    }
+        "editor.rulers": [
+            80
+        ],
+        "markdownlint.config": {
+            "default": true,
+            "MD003": {
+                "style": "atx"
+            }, // 标题是单边井号
+            "MD004": {
+                "style": "asterisk"
+            }, // 列表是星号
+            "MD007": {
+                "indent": 2
+            }, // 无序列表缩进 2 个空格
+            "MD049": {
+                "style": "underscore"
+            }, // 斜体使用下划线
+            "MD050": {
+                "style": "asterisk"
+            }, // 粗体使用星号
+            "no-hard-tabs": true, // 禁止使用 Tab
+            "no-inline-html": false, // 允许内联 HTML
+            "no-empty-links": false, // 允许空链接
+            "code-block-style": false, // 允许代码块风格不同
+        }
+    },
 }

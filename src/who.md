@@ -1,9 +1,8 @@
-who
-===
+# who
 
 ## SYNOPSIS
 
-	who [-aH]
+    who [-aH]
 
 ## DESCRIPTION
 
@@ -11,8 +10,8 @@ who
 
 ## OPTIONS
 
-* `-a`	全部
-* `-H`	表头
+* `-a` 全部
+* `-H` 表头
 
 ## WARNINGS
 
